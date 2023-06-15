@@ -64,7 +64,7 @@ main {
   margin-top: 24px;
   width: 100%;
   background: var(--bg-todo);
-  padding: 10px;
+  padding: 10px 24px 10px 24px;
   height: 55px;
   display: grid;
   grid-template-columns: 10% auto;
@@ -112,6 +112,7 @@ main {
   background: hsl(237, 14%, 26%);
   position: relative;
   cursor: pointer;
+  margin-left: 20px;
 }
 .circle::before {
   content: "";
@@ -137,6 +138,7 @@ main {
   caret-color: hsl(220, 98%, 61%);
   font-family: 'Josefin Sans', sans-serf;
   transition: 0.5s;
+  padding: 10px;
 }
 #todo-input:focus {
   outline: none;
@@ -158,20 +160,18 @@ main {
   display: grid;
   grid-template-columns: 10% auto 10%;
   align-items: center;
-  padding: 10px;
   font-weight: 400;
   border-bottom: var(--border-color);
-  /* cursor: grab; */
+  cursor: grab;
 }
 .todo input[type="checkbox"] {
   display: none;
 }
 .todo p {
   cursor: grab;
+  padding-left: 35px; 
 }
-.todo p:hover {
-  font-weight: bold;
-}
+
 .cross {
   width: 15px;
   height: 15px;
@@ -240,14 +240,23 @@ main {
   font-weight: 700;
   transition: 0.5s;
 }
-.filters div:hover,
-.remarks div:not(.filters):hover {
-  color: hsl(234, 11%, 52%);
-  font-weight: 900;
-}
+
 .filterActive {
   color: hsl(220, 98%, 61%);
 }
+
+.activeButton:hover {
+  color: #ffffff;
+  font-weight: 900;
+}
+.completedButton:hover {
+  color: #ffffff;
+  font-weight: 900;
+}
+.clearComplete:hover {
+  color: #ffffff;
+}
+
 .small-size {
   font-size: 13px;
   color: hsl(234, 11%, 52%);
